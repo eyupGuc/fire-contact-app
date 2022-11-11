@@ -24,6 +24,8 @@ height: 3rem;
 width: 22rem;
 margin: 1rem 1rem;
 
+
+
 `;
 
 export const AddButton=styled.button`
@@ -36,4 +38,5 @@ font-size: 1.5rem;
 font-weight: 900;
 border: none;
 border-radius: 8px;
+cursor: pointer;
 `;

@@ -4,7 +4,10 @@ const Form = () => {
   return (
     <FormContainer>
      <InputDiv type="text" />
-     <InputDiv type="text" />
+    <form >
+
+      <input type="text" placeholder="" value="" onChange="" />
+    </form>
 
       <FormSection class="form-select" aria-label="Default select example">
         <option selected>Gender</option>
