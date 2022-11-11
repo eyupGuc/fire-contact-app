@@ -1,13 +1,19 @@
+import { AddButton, FormContainer, FormSection, InputDiv } from "./Form.styled";
+
 const Form = () => {
   return (
-    <>
-      <select class="form-select" aria-label="Default select example">
-        <option selected>Open this select menu</option>
-        <option value="1">One</option>
-        <option value="2">Two</option>
-        <option value="3">Three</option>
-      </select>
-    </>
+    <FormContainer>
+     <InputDiv type="text" />
+     <InputDiv type="text" />
+
+      <FormSection class="form-select" aria-label="Default select example">
+        <option selected>Gender</option>
+        <option value="1">Male</option>
+        <option value="2">Female</option>
+        <option value="3">Other</option>
+      </FormSection>
+      <AddButton>Add</AddButton>
+    </FormContainer>
   );
 };
 

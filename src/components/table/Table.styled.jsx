@@ -1,12 +1,23 @@
 import styled from "styled-components";
 
+
+export const MainContainer=styled.div`
+
+display: flex;
+align-items: center;
+justify-content: center;
+height: 100vh;
+`;
+
 export const TableContainer=styled.div`
 width: 400px;
 height: 400px;
-border: 2px solid red;
+/* border: 2px solid red; */
 text-align: center;
 
+
 `;
+
 
 export const Brand=styled.h4`
 padding: 1rem 0;

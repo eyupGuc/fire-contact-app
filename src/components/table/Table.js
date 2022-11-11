@@ -1,20 +1,24 @@
-import { AddTextContact, Brand, TableContainer } from "./Table.styled"
-import Form from "../form/Form"
+import {
+  AddTextContact,
+  Brand,
+  MainContainer,
+  TableContainer,
+} from "./Table.styled";
+import Form from "../form/Form";
 
-const Table=()=>{
-    return(
-
-<TableContainer>
-    <Brand>
-    <i>{"<eGuc/>"}  </i>  
-    <span>DESIGN</span>
-    </Brand>
-    <AddTextContact>ADD CONTACT</AddTextContact>
-    <Form/>
-</TableContainer>
-
-
-    )
-}
+const Table = () => {
+  return (
+    <MainContainer>
+      <TableContainer>
+        <Brand>
+          <i>{"<eGuc/>"} </i>
+          <span>DESIGN</span>
+        </Brand>
+        <AddTextContact>ADD CONTACT</AddTextContact>
+        <Form />
+      </TableContainer>
+    </MainContainer>
+  );
+};
 
 export default Table;
