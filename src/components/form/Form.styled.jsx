@@ -14,6 +14,13 @@ export const FormSection = styled.select`
   font-size: 1.5rem;
   border: none;
   :focus{outline:none}
+  @media (max-width:480px) {
+    width: 10rem;
+    height: 2rem;
+    font-size: 1rem;
+    
+    
+  }
 `;
 
 export const InputMainDiv = styled.div`
@@ -29,6 +36,13 @@ export const InputDiv = styled.input`
   :focus {
     outline: none;
   }
+  @media (max-width:480px) {
+    width: 10rem;
+    height: 2rem;
+    font-size: 1rem;
+    
+    
+  }
 `;
 
 export const AddButton = styled.button`
@@ -42,6 +56,13 @@ export const AddButton = styled.button`
   border: none;
   border-radius: 8px;
   cursor: pointer;
+  @media (max-width:480px) {
+    width: 10rem;
+    height: 2rem;
+    font-size: 1rem;
+
+    
+  }
 `;
 
 export const IconStyled = styled.i`
