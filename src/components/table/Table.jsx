@@ -9,8 +9,14 @@ import {
   TableContainer,
 } from "./Table.styled";
 import Form from "../form/Form";
+import { useEffect } from "react";
+import { getData } from "../../utils/Firebase";
 
 const Table = () => {
+  useEffect(() => {
+    getData(userId);
+  });
+
   return (
     <MainContainer>
       <TableContainer>
@@ -24,7 +30,7 @@ const Table = () => {
       <ContactMainDiv>
         <ContactsText>Contacts</ContactsText>
         <ContactListMainDiv>
-          <table class="table">
+          <table>
             <thead>
               <tr>
                 <th scope="col">Username</th>
