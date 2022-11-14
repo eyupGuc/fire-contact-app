@@ -1,15 +1,21 @@
+import { useState } from "react";
 
-import './App.css';
+import "./App.css";
 
-import Table from './components/table/Table';
-
-
+import Table from "./components/table/Table";
+import { EditContext } from "./context/context";
 
 function App() {
-  return (
-    <div className="App">
-<Table/>
-    </div>
+  const [updateContact, setUpdateContact] = useState();
+
+  console.log(updateContact);
+ 
+    return (
+    
+      <EditContext.Provider value={{ updateContact, setUpdateContact }}>
+        <Table />
+      </EditContext.Provider>
+    
   );
 }
 

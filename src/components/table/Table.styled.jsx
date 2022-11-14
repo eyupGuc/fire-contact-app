@@ -5,17 +5,17 @@ export const MainContainer = styled.div`
   align-items: center;
   justify-content: center;
   height: 100vh;
+
+  @media (max-width: 841px) {
+    display: inline-block;
+    margin: 2rem 3rem;
+  }
 `;
 
 export const TableContainer = styled.div`
   width: 400px;
-  height: 400px;
-  margin-left: 2rem;
-  /* border: 2px solid red; */
+
   text-align: center;
-  @media (max-width: 480px) {
-    width: 300px;
-  }
 `;
 
 export const Brand = styled.h4`
@@ -32,9 +32,9 @@ export const Brand = styled.h4`
   span {
     color: black;
   }
-  @media (max-width: 480px) {
+  /* @media (max-width: 480px) {
     font-size: 1rem;
-  }
+  } */
 `;
 
 export const AddTextContact = styled.h4`
@@ -43,9 +43,6 @@ export const AddTextContact = styled.h4`
   background-color: white;
   font-weight: 900;
   font-size: 2rem;
-  @media (max-width: 480px) {
-    font-size: 1rem;
-  }
 `;
 
 export const ContactsText = styled.h4`
@@ -53,28 +50,39 @@ export const ContactsText = styled.h4`
   background-color: white;
   font-weight: 900;
   font-size: 2rem;
-  @media (max-width: 480px) {
-    font-size: 1rem;
-  }
 `;
 
 export const ContactMainDiv = styled.div`
-  width: 600px;
+  width: 400px;
   text-align: center;
-  margin: 0 2rem;
+  margin-left: 2rem;
+
+  @media (max-width: 841px) {
+    margin-top: 3rem;
+    margin-left: 0;
+  }
 `;
 
 export const ContactListMainDiv = styled.div`
   margin-top: 2rem;
- background-color: white;
- border-radius: 4px;
- 
-
-  
-`;
-export const TableBorder=styled.div`
-border-bottom: 1px solid black;
-
+  background-color: white;
+  border-radius: 4px;
 `;
 
+export const TableListContainer = styled.table`
+  width: 400px;
+`;
 
+export const TheadContainer=styled.thead`
+background-color: #7c7272;
+font-size: 1.2rem;
+`;
+export const TbodyContainer=styled.tbody`
+font-size: 1.2rem;
+
+
+`;
+export const TrDiv=styled.tr`
+border-bottom:1px solid black;
+background-color:#ddd0d0;
+`;

@@ -1,5 +1,9 @@
 import { initializeApp } from "firebase/app";
-import { getDatabase, ref, set, child, get } from "firebase/database";
+import { getDatabase, ref, set,remove, update } from "firebase/database";
+
+
+// import { useContext } from "react";
+// import { UserIdContext } from "../context/context";
 
 // TODO: Replace the following with your app's Firebase project configuration
 // See: https://firebase.google.com/docs/web/learn-more#config-object
@@ -18,29 +22,50 @@ const app = initializeApp(firebaseConfig);
 
 // Initialize Realtime Database and get a reference to the service
 const db = getDatabase(app);
+
+// Created User
 export const addUser = async (username, phoneNumber, userId, gender) => {
   try {
     await set(ref(db, "users/" + userId), {
       username: username,
       phoneNumber: phoneNumber,
       gender: gender,
+      
     });
+   
+   
   } catch (error) {
     console.log(error);
   }
 };
 
-const dbRef = ref(getDatabase(app));
-export const getData = (userId) => {
-  get(child(dbRef, `users/${userId}`))
-    .then((snapshot) => {
-      if (snapshot.exists()) {
-        console.log(snapshot.val());
-      } else {
-        console.log("No data available");
-      }
+// Delete User
+
+export const deleteUser = async (userId) => {
+  try {
+
+    remove(ref(db, 'users/' + userId))
+    .then(() => {
+        // Data delete successfully!
     })
     .catch((error) => {
-      console.error(error);
+        // The delete failed...
     });
+
+   
+
+  } catch (error) {
+    console.log(error);
+  }
 };
+
+export const editUser=(userId,username,phoneNumber,gender)=>{
+  update(ref(db, 'users/' +userId),{
+    username: username,
+      phoneNumber: phoneNumber,
+      gender: gender,
+  })
+  
+}
+
+export const dbRef = ref(getDatabase(app));

@@ -5,33 +5,41 @@ import {
   IconAndInputDiv,
   IconStyled,
   InputDiv,
-  InputMainDiv,
+  InputMainDiv
 } from "./Form.styled";
 import { BsFillPersonFill } from "react-icons/bs";
 import { AiTwotonePhone } from "react-icons/ai";
 import { useState } from "react";
 import { addUser } from "../../utils/Firebase";
+import { useContext } from "react";
+import { HandleBool } from "../../context/context";
 
-const Form = () => {
+const Form = ({ readData, item, handleEdit,setUserId }) => {
   const [username, setUsername] = useState();
   const [phoneNumber, setPhoneNumber] = useState();
   const [gender, setGender] = useState();
-  // const[userId,setUserId]=useState();
+
+  // const [newUsername, setNewUsername] = useState();
+  // const { handleBoolean, setHandleBoolean } = useContext(HandleBool);
 
   const handleSubmit = (e) => {
     const userId = new Date().getTime();
     console.log(userId);
+    // setUserId(userId)
     // setUserId(run)
 
     e.preventDefault();
-    addUser(username, phoneNumber, userId, gender);
-    console.log(userId);
+    if(username && phoneNumber && gender){
+      addUser(username, phoneNumber, userId, gender);
+    }
+    // console.log(userId);
 
-    console.log(username);
-    console.log(phoneNumber);
-    console.log(gender);
+    // console.log(username);
+    // console.log(phoneNumber);
+    // console.log(gender);
     setPhoneNumber("");
     setUsername("");
+    readData();
   };
 
   return (
@@ -42,6 +50,7 @@ const Form = () => {
             <IconStyled>
               <BsFillPersonFill />
             </IconStyled>
+
             <InputDiv
               type="text"
               placeholder="Name"

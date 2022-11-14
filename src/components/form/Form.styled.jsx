@@ -4,6 +4,8 @@ export const FormContainer = styled.div`
   background-color: white;
   margin-top: 1rem;
   padding: 1rem;
+
+
 `;
 
 export const FormSection = styled.select`
@@ -14,13 +16,7 @@ export const FormSection = styled.select`
   font-size: 1.5rem;
   border: none;
   :focus{outline:none}
-  @media (max-width:480px) {
-    width: 10rem;
-    height: 2rem;
-    font-size: 1rem;
-    
-    
-  }
+
 `;
 
 export const InputMainDiv = styled.div`
@@ -36,13 +32,17 @@ export const InputDiv = styled.input`
   :focus {
     outline: none;
   }
-  @media (max-width:480px) {
-    width: 10rem;
-    height: 2rem;
-    font-size: 1rem;
-    
-    
-  }
+
+`;
+
+export const AddTextContact = styled.h4`
+  margin-top: 3rem;
+  border-radius: 4px;
+  background-color: white;
+  font-weight: 900;
+  font-size: 2rem;
+ 
+
 `;
 
 export const AddButton = styled.button`
@@ -56,13 +56,7 @@ export const AddButton = styled.button`
   border: none;
   border-radius: 8px;
   cursor: pointer;
-  @media (max-width:480px) {
-    width: 10rem;
-    height: 2rem;
-    font-size: 1rem;
 
-    
-  }
 `;
 
 export const IconStyled = styled.i`
